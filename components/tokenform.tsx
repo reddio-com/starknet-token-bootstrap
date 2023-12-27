@@ -7,7 +7,7 @@ import {
 import { FormEvent, useMemo, useState } from "react";
 import { cairo } from "starknet";
 import { truncate } from '@/lib/utils';
-import abi_erc20 from '@/lib/abi_erc20';
+import erc20 from '@/lib/erc20.json';
 
 // ERC20 token
 const CONTRACT_ADDRESS =
@@ -27,16 +27,6 @@ export default function TokenForm() {
     // watch: true <- refresh at every block
   });
 
-  /* 
-  For other read functions, we can use this:
-  const { data: balance } = useContractRead({
-    abi: abi_erc20,
-    address: CONTRACT_ADDRESS,
-    functionName: "balanceOf",
-    args: [address],
-  }); 
-  */
-
   /*   
   Creates a single instance of a contract
   You can directly call methods on this instance:  
@@ -46,7 +36,7 @@ export default function TokenForm() {
   for a multicall
   */
   const { contract } = useContract({
-    abi: abi_erc20,
+    abi: erc20,
     address: CONTRACT_ADDRESS,
   });
 
