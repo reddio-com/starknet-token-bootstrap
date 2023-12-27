@@ -25,3 +25,44 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.btn {
+  border: 1px solid transparent;
+  padding: 1rem 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #ff727f;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  text-transform: uppercase;
+  filter: drop-shadow(3px 4px 0 #0d0d2a);
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.btn:hover {
+  border-color: #6b099c;
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.box-shadow {
+  filter: drop-shadow(3px 4px 0 #eee);
+}
+
+input {
+  font-size: 0.85rem;
+  font-family: "IBM Plex Mono";
+  padding: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+}
