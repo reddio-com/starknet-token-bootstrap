@@ -17,7 +17,9 @@ export function StarknetProvider({ children }: { children: React.ReactNode }) {
     order: "alphabetical",
   });
 
-  let apiKey: string = process.env.REDDIO_API_KEY || "";
+  const apiKey = process.env.NEXT_PUBLIC_REDDIO_API_KEY || "";
+
+  console.log('apikey'+apiKey);
 
   return (
 

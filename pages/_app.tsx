@@ -16,6 +16,9 @@ export default function App({ Component, pageProps }: AppProps) {
   if (!isClient) {
     return null; // Or a loading placeholder
   }
+
+  require('dotenv').config();
+
   return <StarknetProvider>
       <Component {...pageProps} />
       <Source/>
