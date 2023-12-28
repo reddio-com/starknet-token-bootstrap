@@ -1,7 +1,7 @@
 import { goerli, mainnet } from "@starknet-react/chains";
 import {
   StarknetConfig,
-  reddioProvider,
+  publicProvider,
   argent,
   braavos,
   useInjectedConnectors,
@@ -17,17 +17,12 @@ export function StarknetProvider({ children }: { children: React.ReactNode }) {
     order: "alphabetical",
   });
 
-  const apiKey = process.env.NEXT_PUBLIC_REDDIO_API_KEY || "";
-
-  console.log('apikey'+apiKey);
-
   return (
-
     // React context that provides access to
     // starknet-react hooks and shared state
     <StarknetConfig
-      chains={[goerli]}
-      provider={reddioProvider({ apiKey })}
+      chains={[mainnet, goerli]}
+      provider={publicProvider()}
       connectors={connectors}
       // autoConnect={false}
     >
