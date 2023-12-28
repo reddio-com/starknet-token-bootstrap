@@ -24,7 +24,7 @@ export default function Home() {
           {isConnected ? (
             <div>
               <h1 className="title font-semibold text-4xl shadowed mb-8">
-                Starknet dapp boostrap
+                Starknet dapp bootstrap
               </h1>
               <p>Hello, {address}</p>
               <TokenForm />
