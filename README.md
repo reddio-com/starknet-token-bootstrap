@@ -1,5 +1,7 @@
 This is a [Starknet token app](https://starknet-token-bootstrap.vercel.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+![Starknet token bootstrap](public/screenshot.png)
+
 ## Getting Started
 
 First, run the development server:
