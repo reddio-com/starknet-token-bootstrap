@@ -13,8 +13,8 @@ export function StarknetProvider({ children }: { children: React.ReactNode }) {
     recommended: [argent(), braavos()],
     // Hide recommended connectors if the user has any connector installed.
     includeRecommended: "onlyIfNoConnectors",
-    // Randomize the order of the connectors.
-    order: "random",
+    // Sort connectors alphabetically by their id.
+    order: "alphabetical",
   });
 
   return (
